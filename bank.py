@@ -23,7 +23,7 @@ Please do not share it with anyone."""
             server.starttls(context=context)
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message)
-        print(f"✅ OTP sent to {receiver_email}")
+        print(f" OTP sent to {receiver_email}")
     except Exception as e:
         print(f"Error sending OTP: {e}")
 
@@ -132,7 +132,7 @@ def user_login():
                 otp_input = input("Enter the OTP sent to your email: ").strip()
 
                 if otp_input == otp_sent:
-                    print(f"\n✅ WELCOME {username.upper()}\n")
+                    print(f"\n WELCOME {username.upper()}\n")
                     return username
                 else:
                     print(" Incorrect OTP.\n")
